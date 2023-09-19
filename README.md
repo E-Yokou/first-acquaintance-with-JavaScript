@@ -1,2 +1,2 @@
 # first-acquaintance-with-JavaScript
-1 lab by web-tech
+7 lab by web-tech
