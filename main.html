@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Страница</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <input type="text" id="myInput">
+    <button onclick="Replace()">Replace</button>
+    <button onclick="addTextToEnd()">AddTextToEnd</button>
+    <button onclick="addTextToStart()">AddTextToStart</button>
+    <div id="myOutput"></div>
+
+    <script>
+        function Replace() {
+            var input = document.getElementById("myInput").value; // Получение значения из поля ввода
+            document.getElementById("myOutput").innerText = input; // Вывод значения в поле вывода
+
+            // Очистка поля ввода
+            document.getElementById("myInput").value = "";
+        }
+        function addTextToEnd() {
+            var input = document.getElementById("myInput").value; // Получение значения из поля ввода
+            var output = document.getElementById("myOutput");
+
+            // Проверка, чтобы не добавлять пустой текст
+            if (input !== "") {
+                // Добавление введенного текста в элемент вывода
+                output.innerHTML += input;
+            }
+
+            // Очистка поля ввода
+            document.getElementById("myInput").value = "";
+        }
+
+        function addTextToStart() {
+            var input = document.getElementById("myInput").value; // Получение значения из поля ввода
+            var output = document.getElementById("myOutput");
+
+            // Проверка, чтобы не добавлять пустой текст
+            if (input !== "") {
+                // Добавление введенного текста в элемент вывода
+                let myOutput = document.querySelector('#myOutput');
+                var output = myOutput.prepend(input);
+            }
+
+            // Очистка поля ввода
+            document.getElementById("myInput").value = "";
+        }
+
+    </script>
+
+</body>
+
+</html>
